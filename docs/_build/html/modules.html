@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Modules &#8212; geo_calcs 0.1.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="contributing.html" title="Contributing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="usage.html" title="Usage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">geo_calcs 0.1.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Modules</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-geo_calcs.calculations.geochron">
+<span id="modules"></span><h1>Modules<a class="headerlink" href="#module-geo_calcs.calculations.geochron" title="Permalink to this headline">¶</a></h1>
+<p>Advanced Geochronology code. Created for Geochron calcualtions
+given by Bruce Eglington and Camille Partin for the Advanced
+Geochronology class at the University of Saskatchewan.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.calc_age">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">calc_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">est_t2_daughter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_daughter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decay_constant</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#calc_age"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.calc_age" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an age, using the isochron equation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>est_initial</strong> (<em>float</em>) – The estimated initial daughter ratio.</p></li>
+<li><p><strong>t2_parent</strong> (<em>float</em>) – The measured t2 parent ratio.</p></li>
+<li><p><strong>present_day</strong> (<em>float</em>) – The measured t2 daughter ratio.</p></li>
+<li><p><strong>decay_constant</strong> (<em>float</em>) – The decay constant of the parent.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An apparent age in Ma.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.calc_delta">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">calc_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#calc_delta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.calc_delta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the delta value, given the sample parent and model parent
+composition.
+:Parameters: * <strong>sample_parent</strong> (<em>float</em>) – Measured parent composition.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>model_parent</strong> (<em>float</em>) – Model parent composition. (Typically CHUR or DM for example.)</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The delta value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.calc_epsilon">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">calc_epsilon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_parent</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#calc_epsilon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.calc_epsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the epsilon value, given the sample parent and model parent
+composition.
+:Parameters: * <strong>sample_parent</strong> (<em>float</em>) – Measured parent composition.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>model_parent</strong> (<em>float</em>) – Model parent composition. (Typically CHUR or DM for example.)</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The epsilon value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.calc_initial">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">calc_initial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t2_daughter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decay_constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#calc_initial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.calc_initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives the initial (or t1) daughter composition, using the isochron
+equation.
+:Parameters: * <strong>t2_daughter</strong> (<em>float</em>) – The t2 daughter ratio.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>t2_parent</strong> (<em>float</em>) – The t2 parent ratio.</p></li>
+<li><p><strong>decay_constant</strong> (<em>float</em>) – The decay constant of the parent</p></li>
+<li><p><strong>t1_age</strong> (<em>float</em>) – The initial (or t1) age.</p></li>
+<li><p><strong>t2_age</strong> (<em>float (Default value = 0)</em>) – The t2 age, which defaults to present day.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The initial (or t1) daughter composition</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.calc_model_age">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">calc_model_age</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t2_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_daughter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_daughter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decay_constant</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#calc_model_age"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.calc_model_age" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the model age of a sample. NOTE: THIS FUNCTION IS UNDER
+TESTING AND MAY NOT GIVE THE CORRECT ANSWER!
+:Parameters: * <strong>t2_parent</strong> (<em>float</em>) – The measured parent composition.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>t1_parent</strong> (<em>float</em>) – The model parent composition.</p></li>
+<li><p><strong>t2_daughter</strong> (<em>float</em>) – The measured daughter composition.</p></li>
+<li><p><strong>t1_daughter</strong> (<em>float</em>) – The model daughter composition.</p></li>
+<li><p><strong>decay_constant</strong> (<em>float</em>) – The decay constant of the isotope.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The calculated model age of the sample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.calc_t2_daughter">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">calc_t2_daughter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decay_constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#calc_t2_daughter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.calc_t2_daughter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives the present day (or t2) daughter composition, using the isochron
+equation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>initial</strong> (<em>float</em>) – The initial daughter ratio (or t1).</p></li>
+<li><p><strong>t2_parent</strong> (<em>float</em>) – The t2 parent ratio.</p></li>
+<li><p><strong>decay_constant</strong> (<em>float</em>) – The decay constant of the parent.</p></li>
+<li><p><strong>t1_age</strong> (<em>float</em>) – The initial (or t1) age.</p></li>
+<li><p><strong>t2_age</strong> (<em>float (Default value = 0)</em>) – The t2 age, which defaults to present day</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The t2 daughter composition.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.convert_halflife">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">convert_halflife</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">halflife</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#convert_halflife"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.convert_halflife" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a decay constant given a half life.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>halflife</strong> (<em>float</em>) – A half life of a given isotope.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The decay constant of that isotope.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.get_PbPb_ratio_data">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">get_PbPb_ratio_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3700</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pb206i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11.152</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pb207i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12.988</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pb208i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">31.23</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#get_PbPb_ratio_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.get_PbPb_ratio_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a DataFrame with various ratios for PbPb plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t1</strong> (<em>int (Default value = 3700)</em>) – The max age for calculating the PbPb data.  The default is based on
+Stacey and Kramers (1975)</p></li>
+<li><p><strong>t2</strong> (<em>int (Default value = 0)</em>) – The min age for calculating the PbPb data.</p></li>
+<li><p><strong>mu</strong> (<em>float</em>) – U238/204Pb ratio.</p></li>
+<li><p><strong>Pb206i</strong> (<em>float (Default value = 11.152)</em>) – Pb206/Pb204 initial ratio. Default is based on
+Stacey and Kramers (1975)</p></li>
+<li><p><strong>Pb207i</strong> (<em>float (Default value = 12.988)</em>) – Pb207/Pb204 initial ratio. Default is based on
+Stacey and Kramers (1975)</p></li>
+<li><p><strong>Pb208i</strong> (<em>float (Default value = 31.23)</em>) – Pb208/Pb204 initial ratio. Default is based on
+Stacey and Krameres (1975)</p></li>
+<li><p><strong>kappa</strong> (<em>float</em>) – 232Th/238U ratio, which depends on the source.  A good number for
+depleted mantle is 2.5, ocean island basalts is 3.75, lower mantle is
+4, and continental crust is 5. (Paul, White, and Turcotte 2003)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dataframe useful for plotting Pb/Pb curves.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>[1] Paul, D., White, W., &amp; Turcotte, D. (2003). Constraints on the
+232Th/238U ratio (κ) of the continental crust. Geochemistry, Geophysics,
+Geosystems, 4(12). doi: 10.1029/2002gc000497
+[2] Stacey, J., &amp; Kramers, J. (1975). Approximation of terrestrial
+lead isotope evolution by a two-stage model. Earth And Planetary Science
+Letters, 26(2), 207-221. doi: 10.1016/0012-821x(75)90088-6</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.get_U_ratio_data">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">get_U_ratio_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lambda238</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5512500000000002e-10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda235</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9.8485e-10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([0.001,</span> <span class="pre">1.0,</span> <span class="pre">2.0,</span> <span class="pre">...,</span> <span class="pre">4565.0,</span> <span class="pre">4566.0,</span> <span class="pre">4567.0])</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#get_U_ratio_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.get_U_ratio_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a DataFrame with various ratios for concordia plots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lambda238</strong> (<em>float (Default value = 1.55125*10*</em>-10)*) – The decay constant for Uranium 238.</p></li>
+<li><p><strong>lambda235</strong> (<em>float (Default value = 9.8485*10*</em>-10)*) – The decay constant for Uranium 235</p></li>
+<li><p><strong>age</strong> (<em>(Default value = np.append([0.001]), [np.arange(1,4568)])</em>) – A list with a range, per year starting at 0.001, and then every
+integer between 1 and 4568.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dataframe with uranium ration data for calculation of various
+concordia plots.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochron.get_age_df">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochron.</span></span><span class="sig-name descname"><span class="pre">get_age_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochron.html#get_age_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochron.get_age_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a DataFrame and filters it for the purpose of putting specific
+ages on the Concordia plots. Note the DataFrame must have a column named
+‘age’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>DataFrame</em>) – A dataframe with a column ‘age’.</p></li>
+<li><p><strong>age_list</strong> (<em>list</em>) – A list of ages you want to place on a Concordia plot.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A filtered pandas DataFrame.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<span class="target" id="module-geo_calcs.calculations.geochem"></span><p>Author                      : Drew Heasman
+Date(last updated)          : 05 June 2021
+Description : Geochemical calculations</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.convert_molality_to_molarity">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">convert_molality_to_molarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">molality</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomic_weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#convert_molality_to_molarity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.convert_molality_to_molarity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts molality to molarity given a molality, an atomic weight,
+and a solution density</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_atomic_perc">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_atomic_perc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_atomic_perc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_atomic_perc" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the atomic percentage of an element in a formula</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_atomic_weight">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_atomic_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formula</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_atomic_weight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_atomic_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the atomic weight of a formula</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_mass_of_an_atom">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_mass_of_an_atom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atomic_mass</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_mass_of_an_atom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_mass_of_an_atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the mass of one atom, given the atomic mass of an isotope</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_moles_element">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_moles_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_moles_element"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_moles_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the moles of an element given the grams, formula, and element</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_moles_formula">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_moles_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formula</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_moles_formula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_moles_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of moles of a formula, given grams and the formula</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_num_atoms_formula">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_num_atoms_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_num_atoms_formula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_num_atoms_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the number of atoms of an element in a formula</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_num_atoms_from_moles">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_num_atoms_from_moles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moles</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_num_atoms_from_moles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_num_atoms_from_moles" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of atoms, given the number of moles.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_ppm_formula">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_ppm_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_occ</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_ppm_formula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_ppm_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the ppm of an element given the formula, element, and the number
+of occurences of that element in the formula.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="geo_calcs.calculations.geochem.get_weight_perc_formula">
+<span class="sig-prename descclassname"><span class="pre">geo_calcs.calculations.geochem.</span></span><span class="sig-name descname"><span class="pre">get_weight_perc_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_occ</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geo_calcs/calculations/geochem.html#get_weight_perc_formula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#geo_calcs.calculations.geochem.get_weight_perc_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the weight percent of an element given the formula, element, and
+the number of occurences of that element in the formula.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="usage.html"
+                        title="previous chapter">Usage</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="contributing.html"
+                        title="next chapter">Contributing</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modules.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="contributing.html" title="Contributing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="usage.html" title="Usage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">geo_calcs 0.1.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Modules</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Drew Heasman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>

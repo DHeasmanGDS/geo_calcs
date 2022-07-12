@@ -120,7 +120,11 @@ def snippet_search(locations, keywords, headers={}):
             temp['location'] = location
             temp['keyword'] = keyword
             df = df.append(temp)
-
+            punct = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{}~'   # `|` is not present here
+    
+    transtab = str.maketrans(dict.fromkeys(punct, ''))
+    # df['highlight'].astype(str)
+    # df['text_mining'] = '|'.join(df['highlight']).translate(transtab).split('|')
     df = df.drop_duplicates(subset=['_gddid'])
     df = df.set_index('_gddid')
     df = df.sort_values(by='hits', ascending=False)
@@ -245,5 +249,8 @@ def distance(s, w1, w2):
             else:
                 prev = i
         i += 1       
- 
-    return min_dist
+    
+    if min_dist == n+1:
+        return None
+    else:
+        return min_dist
